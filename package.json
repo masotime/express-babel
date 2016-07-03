@@ -1,0 +1,36 @@
+{
+  "name": "express-babel",
+  "version": "1.0.0",
+  "description": "Simple middleware to transform ES2015 code at runtime",
+  "main": "lib/index.js",
+  "scripts": {
+    "compile": "babel --presets es2015,stage-0 --plugins transform-runtime -d lib/ src/",
+    "prepublish": "npm run compile",
+    "test": "ava --require babel-register --require babel-polyfill"
+  },
+  "author": "Benjamin Goh <masotime@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/masotime/express-babel"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "babel-cli": "^6.10.1",
+    "babel-eslint": "^6.1.0",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "express": "^4.14.0",
+    "supertest": "^1.2.0",
+    "supertest-as-promised": "^3.1.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.10.4",
+    "bluebird": "^3.4.1"
+  },
+  "ava": {
+    "babel": "inherit"
+  }
+}
