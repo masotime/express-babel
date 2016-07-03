@@ -40,7 +40,7 @@ export default (src, babelOpts) => {
 				return next();
 			}
 
-			const { code, map, ast } = await babel.transformFileAsync(pathToFile);
+			const { code, map, ast } = await babel.transformFileAsync(pathToFile, babelOpts);
 			res.write(code);
 			return res.end();
 		} catch (err) {
