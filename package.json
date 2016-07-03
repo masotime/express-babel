@@ -1,6 +1,6 @@
 {
   "name": "express-babel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple middleware to transform ES2015 code at runtime",
   "main": "lib/index.js",
   "scripts": {
