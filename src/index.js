@@ -41,6 +41,7 @@ export default (src, babelOpts) => {
 			}
 
 			const { code, map, ast } = await babel.transformFileAsync(pathToFile, babelOpts);
+			res.type('text/javascript');
 			res.write(code);
 			return res.end();
 		} catch (err) {
